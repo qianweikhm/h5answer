@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/css/common.css">
+  <link rel="stylesheet" href="dist/css/style.css">
+  <script src="dist/js/jquery.js"></script>
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+
+          docEl.style.fontSize = clientWidth / 10 + 'px';
+        };
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window)
+
+
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- page1 -->
+    <div class="page page1">
+      <img class="loading" src="./images/loading.png">
+      <div class="light">
+        <span class="line"></span>
+        <img class="light_run" src="./images/light.png">
+      </div>
+    </div>
+    <!-- page1 -->
+
+    <!-- page2 -->
+    <div class="page page2">
+      <img src="./images/txt.png">
+      <img class="start" src="./images/buttton.png">
+    </div>
+    <!-- page2 -->
+
+
+
+    <!-- page3 -->
+    <div class="page page3">
+      <span class='prev'></span>
+      <div class="deadtime">倒计时<span class="time">5</span></div>
+      <div class="area">
+        <img src="./images/circle.png">
+        <div class="question">
+          <div class="question-title">
+            <img src="./images/q1.png">
+          </div>
+          <div class="line"></div>
+          <div class="question-option">
+            <ul>
+              <li><span>A.</span> <span class="question-option-txt1">卸妆、洁面是基本，清洁面膜也不可少</span></li>
+              <li><span>B.</span> <span class="question-option-txt2">洁面乳搭配洗脸工具，效果棒棒哒</span></li>
+              <li><span>C.</span> <span class="question-option-txt3">一支洁面乳，搞定全步骤</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="options">
+        <ul>
+          <li grade='3'></li>
+          <li grade='2'></li>
+          <li grade='1'></li>
+        </ul>
+      </div>
+    </div>
+    <!-- page3 -->
+
+    <!-- page4 -->
+    <div class="page page4">
+      <div class="result-title">
+        <img src="./images/result-title.png">
+      </div>
+      <div class="result-area">
+        <!-- <img class="result-bg" src="./images/result-bg.png"> -->
+        <div class="star">
+          <div class="star-sum">
+            <p>水玉光星级</p><p class="stars"></p>
+          </div>
+          <div class="star-detail">
+            <ul>
+              <li>
+                <p class="grade grade1">冰雪恬净</p>
+              </li>
+              <li>
+                <p class="grade grade2">人鱼水润</p>
+              </li>
+              <li>
+                <p class="grade grade3">白亮女王</p>
+              </li>
+              <li>
+                <p class="grade grade4">Q萌肌&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              </li>
+              <li>
+                <p class="grade grade5">通透女神</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="gift">
+        <img src="./images/gift.png">
+      </div>
+    </div>
+    <!-- page4 -->
+
+  </div>
+  </div>
+  <script src="dist/js/run.js"></script>
+</body>
+
+</html>
